@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Build/package output
+dist/
+build/
+*.zip
+
+# Test artifacts
+coverage/
+
+# Local files
+.env
+.env.*

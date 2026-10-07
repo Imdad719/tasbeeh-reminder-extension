@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasbeeh Reminder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="logo">🌙</div>
+      <div>
+        <h1>Tasbeeh Reminder</h1>
+        <p>Gentle reminders to remember Allah.</p>
+      </div>
+    </header>
+
+    <section class="status-card">
+      <div>
+        <span class="label">Reminder</span>
+        <strong id="statusText">Every 3 minutes</strong>
+      </div>
+      <label class="switch">
+        <input id="enabled" type="checkbox" checked>
+        <span></span>
+      </label>
+    </section>
+
+    <section class="settings">
+      <label>
+        <span>Reminder interval</span>
+        <select id="intervalMinutes">
+          <option value="1">1 minute</option>
+          <option value="2">2 minutes</option>
+          <option value="3" selected>3 minutes</option>
+          <option value="5">5 minutes</option>
+          <option value="10">10 minutes</option>
+          <option value="15">15 minutes</option>
+          <option value="30">30 minutes</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Display duration</span>
+        <select id="displaySeconds">
+          <option value="3">3 seconds</option>
+          <option value="5">5 seconds</option>
+          <option value="10" selected>10 seconds</option>
+          <option value="15">15 seconds</option>
+          <option value="20">20 seconds</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Default position</span>
+        <select id="position">
+          <option value="bottom-right" selected>Bottom right</option>
+          <option value="bottom-left">Bottom left</option>
+          <option value="top-right">Top right</option>
+          <option value="top-left">Top left</option>
+        </select>
+      </label>
+    </section>
+
+    <button id="testReminder" class="primary">Show test reminder</button>
+
+    <p id="saveStatus" class="save-status" aria-live="polite"></p>
+
+    <footer>
+      <span>Open source • v1.0.0</span>
+      <a href="../README.md" target="_blank">About</a>
+    </footer>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

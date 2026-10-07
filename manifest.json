@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Tasbeeh Reminder - Zikr & Istighfar",
+  "version": "1.2.0",
+  "description": "A gentle browser reminder for Tasbeeh, Zikr, Istighfar and daily remembrance of Allah.",
+  "action": {
+    "default_title": "Tasbeeh Reminder",
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "permissions": [
+    "alarms",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}

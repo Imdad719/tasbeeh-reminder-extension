@@ -1,0 +1,151 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 350px;
+  background: #f6f8f6;
+  color: #172019;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app { padding: 18px; }
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.logo {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #e3efe6;
+  font-size: 23px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.hero p {
+  margin: 3px 0 0;
+  color: #6b756e;
+  font-size: 12px;
+}
+
+.status-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-radius: 14px;
+  background: white;
+  border: 1px solid #e4e9e5;
+}
+
+.label {
+  display: block;
+  color: #7a847d;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+.status-card strong { font-size: 14px; }
+
+.switch input { display: none; }
+
+.switch span {
+  display: block;
+  width: 44px;
+  height: 24px;
+  padding: 3px;
+  border-radius: 30px;
+  background: #c9d0cb;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.switch span::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  transition: .2s;
+}
+
+.switch input:checked + span { background: #4c8b62; }
+.switch input:checked + span::after { transform: translateX(20px); }
+
+.settings {
+  margin-top: 14px;
+  padding: 14px;
+  background: white;
+  border: 1px solid #e4e9e5;
+  border-radius: 14px;
+}
+
+.settings label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.settings label:last-child { margin-bottom: 0; }
+
+.settings label > span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+select {
+  width: 100%;
+  border: 1px solid #d8ded9;
+  border-radius: 9px;
+  padding: 9px;
+  background: white;
+  color: #172019;
+}
+
+.primary {
+  width: 100%;
+  margin-top: 14px;
+  padding: 11px;
+  border: 0;
+  border-radius: 10px;
+  background: #286341;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary:hover { background: #204f33; }
+
+.save-status {
+  min-height: 15px;
+  margin: 8px 2px 0;
+  color: #4c8b62;
+  font-size: 11px;
+  text-align: center;
+  background: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  color: #8a938c;
+  font-size: 10px;
+}
+
+footer a {
+  color: #4c8b62;
+  text-decoration: none;
+}
